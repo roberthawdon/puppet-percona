@@ -39,6 +39,7 @@ class percona::server (
   $max_allowed_packet             = $percona::params::max_allowed_packet,
   $log_bin_dir                    = $percona::params::log_bin_dir,
   $log_bin_file                   = $percona::params::log_bin_file,
+  $log_warnings                   = $percona::params::log_warnings,
 
 ) inherits params {
 

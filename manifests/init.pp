@@ -166,6 +166,7 @@ class percona (
   $log_bin_dir                    = $percona::params::log_bin_dir,
   $log_bin_file                   = $percona::params::log_bin_file,
   $log_slave_updates              = $percona::params::log_slave_updates,
+  $log_warnings                   = $percona::params::log_warnings,
 
 ) inherits params {
     class { percona::server:
