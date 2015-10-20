@@ -126,7 +126,7 @@
 #
 class percona (
 
-/*  $mysql_version                  = $percona::params::mysql_version,
+  $mysql_version                  = $percona::params::mysql_version,
   $root_password                  = $percona::params::root_password,
   $old_passwords                  = $percona::params::old_passwords,
   $datadir                        = $percona::params::datadir,
@@ -166,7 +166,7 @@ class percona (
   $log_bin_dir                    = $percona::params::log_bin_dir,
   $log_bin_file                   = $percona::params::log_bin_file,
   $log_slave_updates              = $percona::params::log_slave_updates,
-  $log_warnings                   = $percona::params::log_warnings, */
+  $log_warnings                   = $percona::params::log_warnings, 
 
 ) inherits params {
     class { percona::server:
