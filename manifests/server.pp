@@ -133,7 +133,7 @@ class percona::server (
       ensure => directory,
       owner  => mysql,
       group  => mysql,
-      require => Package[$percona::params::percona_server_packages],
+      require => Package[$percona_server_packages],
       notify  => Service[$percona::params::percona_service]
   }
 
