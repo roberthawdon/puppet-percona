@@ -4,6 +4,7 @@ class percona::params {
   $root_password                  = undef
   $old_passwords                  = false
   $datadir                        = "/var/lib/mysql"
+  $port                           = "3306"
   $server_id                      = 1
   $skip_slave_start               = true
   $ist_recv_addr                  = $ipaddress

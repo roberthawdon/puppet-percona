@@ -130,6 +130,7 @@ class percona (
   $root_password                  = $percona::params::root_password,
   $old_passwords                  = $percona::params::old_passwords,
   $datadir                        = $percona::params::datadir,
+  $port                           = $percona::params::port,
   $server_id                      = $percona::params::server_id,
   $skip_slave_start               = $percona::params::skip_slave_start,
   $ist_recv_addr                  = $percona::params::ist_recv_addr,
