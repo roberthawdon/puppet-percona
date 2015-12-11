@@ -40,6 +40,7 @@ class percona::params {
   $log_bin_file                   = undef
   $log_slave_updates              = undef
   $log_warnings                   = undef
+  $tmpdir                         = "/tmp"
 
   case $::osfamily {
     'RedHat': {

@@ -40,7 +40,8 @@ class percona::server (
   $log_bin_dir                    = $percona::log_bin_dir,
   $log_bin_file                   = $percona::log_bin_file,
   $log_slave_updates              = $percona::log_slave_updates,
-  $log_warnings                   = $percona::log_warnings, 
+  $log_warnings                   = $percona::log_warnings,
+  $tmpdir                         = $percona::tmpdir, 
 
 ) inherits params {
 

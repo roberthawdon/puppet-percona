@@ -9,6 +9,7 @@ user=mysql
 # clients (those using the mysqlclient10 compatibility package).
 old_passwords=1
 <% end %>
+tmpdir = <%= @tmpdir %>
 
 <%if @skip_slave_start %>skip-slave-start<% end %>
 innodb_buffer_pool_size = <%= @innodb_buffer_pool_size %>
