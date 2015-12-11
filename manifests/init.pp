@@ -108,6 +108,8 @@
 #
 # [*query_cache_size*]
 #   The size of the query cache
+# [*tmpdir*]
+#   MySQL's temporary directory
 #
 #
 # === Examples
@@ -166,7 +168,8 @@ class percona (
   $log_bin_dir                    = $percona::params::log_bin_dir,
   $log_bin_file                   = $percona::params::log_bin_file,
   $log_slave_updates              = $percona::params::log_slave_updates,
-  $log_warnings                   = $percona::params::log_warnings, 
+  $log_warnings                   = $percona::params::log_warnings,
+  $tmpdir                         = $percona::params::tmpdir,
 
 ) inherits params {
     class { percona::server:
@@ -207,5 +210,6 @@ class percona (
         query_cache_size               => $query_cache_size,
         max_allowed_packet             => $max_allowed_packet,
         log_warnings                   => $log_warnings,
+        tmpdir                         => $tmpdir,
     }
 }
