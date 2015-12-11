@@ -109,7 +109,7 @@
 # [*query_cache_size*]
 #   The size of the query cache
 # [*tmpdir*]
-#   MySQL's temporary directory
+#   MySQL's temporary directory, parent directories must already exist
 #
 #
 # === Examples

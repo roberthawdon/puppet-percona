@@ -41,7 +41,7 @@ class percona::server (
   $log_bin_file                   = $percona::log_bin_file,
   $log_slave_updates              = $percona::log_slave_updates,
   $log_warnings                   = $percona::log_warnings,
-  $tmpdir                         = $percona::tmpdir, 
+  $tmpdir                         = $percona::tmpdir,
 
 ) inherits params {
 
@@ -130,6 +130,14 @@ class percona::server (
       require => Package[$percona_server_packages],
       notify  => Service[$percona::params::percona_service]
   }
+
+  file {$tmpdir:
+      ensure => directory,
+      owner  => mysql,
+      group  => mysql,
+      require => Package[$percona_server_packages],
+      notify  => Service[$percona::params::percona_service]
+      }
 
   file {$log_bin_dir:
       ensure => directory,
